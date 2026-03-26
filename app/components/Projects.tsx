@@ -4,64 +4,32 @@ import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
-    title: "CloudDash",
+    title: "AI-Powered Fitness Agent",
     description:
-      "A real-time cloud infrastructure monitoring dashboard with live metrics, alert management, and cost analytics across AWS, GCP, and Azure.",
-    tags: ["Next.js", "TypeScript", "WebSocket", "Chart.js", "Terraform"],
-    emoji: "☁️",
+      "Engineered a FastAPI backend with fully validated endpoints to generate AI-driven fitness programs using Gemini 2.5 Flash, which provides responses within 1 minute.",
+    tags: ["Gemini API", " Python", "ReactJS", "FastAPI"],
     link: "#",
     github: "#",
     featured: true,
   },
   {
-    title: "AiWrite",
+    title: "Pokedex Web Application",
     description:
-      "AI-powered writing assistant with context memory, multiple tone presets, grammar suggestions, and Google Docs-style collaboration.",
-    tags: ["React", "OpenAI API", "Node.js", "PostgreSQL", "tRPC"],
+      "Built an interactive single-page web application enabling users to search over 1000s of Pokemon by name, dynamically fetching real time data from the PokeAPI.",
+    tags: ["HTML5", "CSS3", "JavaScript", "PokeAPI", "RESTfulAPI"],
     emoji: "✍️",
     link: "#",
     github: "#",
     featured: true,
   },
   {
-    title: "ShopFlow",
+    title: "Malware Image Classification — MobileNetV2 Transfer Learning",
     description:
-      "A headless e-commerce platform with a composable architecture, high-performance SSG/ISR, and Stripe-powered checkout.",
-    tags: ["Next.js", "Sanity CMS", "Stripe", "Tailwind", "Vercel"],
-    emoji: "🛒",
+      "Built a 25-class malware family classifier using transfer learning on the MalImg dataset (~9,000+ binary visualization images), achieving 95% overall accuracy on the held-out validation set.",
+    tags: ["TensorFlow", "Keras", "Python", "MalImg Dataset", "CNN"],
     link: "#",
     github: "#",
     featured: true,
-  },
-  {
-    title: "DevSync",
-    description:
-      "P2P collaborative code editor with real-time cursors, inline chat, and Monaco editor integration for pair programming.",
-    tags: ["React", "Yjs", "WebRTC", "Monaco", "Express"],
-    emoji: "🔄",
-    link: "#",
-    github: "#",
-    featured: false,
-  },
-  {
-    title: "TaskOrbit",
-    description:
-      "Kanban-style project management tool with drag-and-drop, time tracking, GitHub integration, and sprint analytics.",
-    tags: ["Next.js", "Prisma", "Redis", "Zustand", "Framer Motion"],
-    emoji: "🚀",
-    link: "#",
-    github: "#",
-    featured: false,
-  },
-  {
-    title: "Pixelate",
-    description:
-      "In-browser image editing app with layer support, filters, CSS-powered effects, and export to PNG/SVG.",
-    tags: ["React", "Canvas API", "Zustand", "Vite", "TypeScript"],
-    emoji: "🎨",
-    link: "#",
-    github: "#",
-    featured: false,
   },
 ];
 
@@ -101,10 +69,6 @@ export default function Projects() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl" style={{ color: "var(--foreground)" }}>
             Featured Projects
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg" style={{ color: "var(--muted)" }}>
-            A selection of projects I&apos;ve built — from SaaS products to
-            developer tools and open-source contributions.
-          </p>
         </motion.div>
 
         {/* Featured grid */}
@@ -218,7 +182,7 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
 
       {/* Title & description — same muted color for both */}
       <div className="flex-1">
-        <h3 className="mb-2 text-lg font-semibold" style={{ color: "var(--muted)" }}>
+        <h3 className="mb-2 text-lg font-semibold" style={{ color: "var(--foreground)" }}>
           {project.title}
         </h3>
         <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>

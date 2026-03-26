@@ -85,15 +85,11 @@ export default function About() {
             {/* Bio */}
             <p className="text-base leading-relaxed" style={{ color: "var(--muted)" }}>
               Hey! I&apos;m <strong style={{ color: "var(--foreground)" }}>Ommkar Pattnaik</strong>, a
-              full-stack developer with a passion for building products that make a real
-              difference. I thrive at the intersection of design and engineering — creating
-              interfaces that are both beautiful and blazing fast.
+              Computer Science undergraduate with experience in AI agents, machine learning, and full-stack web development. Skilled in Python, JavaScript,
+              and modern machine learning tools (TensorFlow, Scikit-learn) with a strong interest in building intelligent systems and data-driven applications.
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-              When I&apos;m not shipping code, you&apos;ll find me contributing to open-source
-              projects, writing technical blog posts, or exploring the latest in AI tooling.
-              I believe in writing code that&apos;s not just functional, but a pleasure to
-              maintain.
+              I am passionate about leveraging technology to solve real-world problems, and I enjoy working on projects that push the boundaries of what's possible.
             </p>
 
             {/* Stats row */}

@@ -12,8 +12,8 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: "Email",
-    value: "alex@devfolio.com",
-    href: "mailto:alex@devfolio.com",
+    value: "ommkar2005@gmail.com",
+    href: "mailto:ommkar2005@gmail.com",
   },
   {
     icon: (
@@ -22,8 +22,8 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: "LinkedIn",
-    value: "/in/alexchen-dev",
-    href: "https://linkedin.com",
+    value: "Ommkar Pattnaik",
+    href: "https://www.linkedin.com/in/ommkar-pattnaik-1b643b266/",
   },
   {
     icon: (
@@ -32,8 +32,8 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: "GitHub",
-    value: "@alex-chen-dev",
-    href: "https://github.com",
+    value: "@ommkar",
+    href: "https://github.com/ommkar",
   },
 ];
 
@@ -153,9 +153,7 @@ export default function Contact() {
                   style={{ background: "rgba(255,255,255,0.5)" }}
                 />
               </span>
-              <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
-                Currently available for freelance / full-time
-              </p>
+
             </div>
           </motion.div>
 

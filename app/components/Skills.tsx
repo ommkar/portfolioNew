@@ -4,39 +4,38 @@ import { motion } from "framer-motion";
 
 const SKILL_GROUPS = [
   {
-    category: "Frontend",
+    category: "Languages",
     icon: "🎨",
     skills: [
-      { name: "React",         icon: "⚛️",  level: 95 },
-      { name: "Next.js",       icon: "▲",   level: 92 },
-      { name: "TypeScript",    icon: "TS",  level: 90 },
-      { name: "Tailwind CSS",  icon: "💨",  level: 93 },
-      { name: "Framer Motion", icon: "🎞️",  level: 80 },
-      { name: "Three.js",      icon: "🧊",  level: 65 },
+      { name: "C", icon: "⚛️", level: 95 },
+      { name: "C++", icon: "▲", level: 92 },
+      { name: "Python", icon: "TS", level: 90 },
+      { name: "Java", icon: "💨", level: 93 },
     ],
   },
   {
-    category: "Backend",
+    category: "Web Development",
     icon: "⚙️",
     skills: [
-      { name: "Node.js",    icon: "🟢", level: 90 },
-      { name: "Express",    icon: "🚂", level: 88 },
-      { name: "PostgreSQL", icon: "🐘", level: 82 },
-      { name: "Prisma",     icon: "◈",  level: 85 },
-      { name: "Redis",      icon: "🔴", level: 75 },
-      { name: "GraphQL",    icon: "◉",  level: 78 },
+      { name: "React", icon: "⚛️", level: 95 },
+      { name: "Node.js", icon: "🟢", level: 90 },
+      { name: "Express", icon: "🚂", level: 88 },
+      { name: "HTML5", icon: "🐘", level: 82 },
+      { name: "CSS3", icon: "◈", level: 85 },
+      { name: "JavaScript", icon: "🔴", level: 75 },
+      { name: "RESTful API", icon: "◉", level: 78 },
     ],
   },
   {
-    category: "DevOps & Tools",
+    category: "Machine Learning & Data Science",
     icon: "🔧",
     skills: [
-      { name: "Docker",  icon: "🐳", level: 82 },
-      { name: "AWS",     icon: "☁️", level: 75 },
-      { name: "CI/CD",   icon: "🔄", level: 80 },
-      { name: "Git",     icon: "🌿", level: 95 },
-      { name: "Linux",   icon: "🐧", level: 78 },
-      { name: "Vercel",  icon: "▲",  level: 90 },
+      { name: "TensorFlow", icon: "🐳", level: 82 },
+      { name: "Keras", icon: "☁️", level: 75 },
+      { name: "Python", icon: "🔄", level: 80 },
+      { name: "Scikit-learn", icon: "🌿", level: 95 },
+      { name: "Pandas", icon: "🐧", level: 78 },
+      { name: "NumPy", icon: "▲", level: 90 },
     ],
   },
 ];
@@ -99,8 +98,8 @@ export default function Skills() {
                 <span
                   className="flex h-10 w-10 items-center justify-center rounded-xl text-xl"
                   style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    background: "rgba(255,255,255,0.10)",
+                    border: "1px solid rgba(255,255,255,0.15)",
                   }}
                 >
                   {group.icon}
@@ -168,7 +167,7 @@ function SkillBar({ skill }: { skill: { name: string; icon: string; level: numbe
       </div>
       <div
         className="h-1.5 w-full overflow-hidden rounded-full"
-        style={{ background: "rgba(255,255,255,0.06)" }}
+        style={{ background: "rgba(255,255,255,0.10)" }}
       >
         <motion.div
           className="h-full rounded-full"
@@ -177,7 +176,7 @@ function SkillBar({ skill }: { skill: { name: string; icon: string; level: numbe
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           style={{
-            background: "linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.15))",
+            background: "linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.25))",
           }}
         />
       </div>
