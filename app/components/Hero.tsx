@@ -101,16 +101,6 @@ export default function Hero() {
           transition={{ duration: 2 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
-            className="mb-8 flex justify-center"
-          >
-            <span className="section-label">👋 Available for work</span>
-          </motion.div>
-
           {/* Heading with letter-by-letter animation */}
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-6 tracking-tighter">
             {words.map((word, wordIndex) => (

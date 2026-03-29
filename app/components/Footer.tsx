@@ -10,26 +10,8 @@ export default function Footer() {
     >
       <p className="text-sm" style={{ color: "var(--muted)" }}>
         Built with{" "}
-        <span style={{ opacity: 0.6 }}>♥</span> using{" "}
-        <a
-          href="https://nextjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium transition-opacity hover:opacity-70"
-          style={{ color: "var(--foreground)" }}
-        >
-          Next.js
-        </a>{" "}
-        &amp;{" "}
-        <a
-          href="https://tailwindcss.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium transition-opacity hover:opacity-70"
-          style={{ color: "var(--foreground)" }}
-        >
-          Tailwind CSS
-        </a>
+        <span style={{ opacity: 0.6 }}>♥</span>
+
         {" — "}&copy; {year} Ommkar Pattnaik. All rights reserved.
       </p>
     </footer>

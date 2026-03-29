@@ -2,41 +2,27 @@
 
 import { motion } from "framer-motion";
 
-const STATS = [
-  { value: "5+", label: "Years Experience" },
-  { value: "40+", label: "Projects Shipped" },
-  { value: "15+", label: "Happy Clients" },
-  { value: "8k+", label: "GitHub Stars" },
-];
-
-const TIMELINE = [
+const EDUCATION = [
   {
-    year: "2024",
-    role: "Senior Full-Stack Engineer",
-    company: "Vercel Inc.",
+    year: "2022 – 2026",
+    degree: "B.Tech in Computer Science & Engineering",
+    institution: "Your University Name",
     description:
-      "Led development of high-traffic Next.js-based SaaS products. Mentored junior devs and drove architectural decisions across 3 product squads.",
+      "Focused on AI/ML, data structures, algorithms, and full-stack development. Participated in hackathons and open-source projects.",
   },
   {
-    year: "2022",
-    role: "Full-Stack Developer",
-    company: "Stripe",
+    year: "2020 – 2022",
+    degree: "Higher Secondary (12th Grade)",
+    institution: "Your School Name",
     description:
-      "Built and maintained payment flow UIs, dashboard components, and internal tooling. Contributed to the React library used across all Stripe products.",
+      "Studied Science stream with Computer Science. Achieved strong academic results.",
   },
   {
     year: "2020",
-    role: "Frontend Developer",
-    company: "Freelance",
+    degree: "Secondary (10th Grade)",
+    institution: "Your School Name",
     description:
-      "Delivered 20+ projects for startups and agencies. Specialized in React, animation, and performance optimization for web apps.",
-  },
-  {
-    year: "2019",
-    role: "B.Sc. Computer Science",
-    company: "MIT",
-    description:
-      "Graduated with honors. Focused on distributed systems, HCI, and algorithms. Published research on real-time collaborative editing.",
+      "Completed secondary education with distinction.",
   },
 ];
 
@@ -67,7 +53,7 @@ export default function About() {
             transition={{ duration: 0.8, type: "spring" }}
             className="flex flex-col gap-6"
           >
-            {/* Avatar placeholder */}
+            {/* Photo */}
             <div
               className="relative mb-2 flex h-64 w-full items-center justify-center overflow-hidden rounded-2xl"
               style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
@@ -79,7 +65,11 @@ export default function About() {
                     "radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.3), transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.15), transparent 60%)",
                 }}
               />
-              <span className="relative text-8xl select-none">👨‍💻</span>
+              <img
+                src="/photo.jpg"
+                alt="Ommkar Pattnaik"
+                className="relative h-full w-full object-cover rounded-2xl"
+              />
             </div>
 
             {/* Bio */}
@@ -91,24 +81,6 @@ export default function About() {
             <p className="text-base leading-relaxed" style={{ color: "var(--muted)" }}>
               I am passionate about leveraging technology to solve real-world problems, and I enjoy working on projects that push the boundaries of what's possible.
             </p>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-              {STATS.map(({ value, label }, i) => (
-                <motion.div
-                  key={label}
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, type: "spring" }}
-                  className="rounded-xl p-4 text-center"
-                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
-                >
-                  <p className="text-2xl font-bold gradient-text">{value}</p>
-                  <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>{label}</p>
-                </motion.div>
-              ))}
-            </div>
 
             {/* Download CV */}
             <a href="#">
@@ -125,7 +97,7 @@ export default function About() {
             </a>
           </motion.div>
 
-          {/* Right: timeline */}
+          {/* Right: Education */}
           <motion.div
             initial={{ x: 40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -134,7 +106,7 @@ export default function About() {
             className="flex flex-col gap-2"
           >
             <h3 className="mb-6 text-xl font-semibold" style={{ color: "var(--foreground)" }}>
-              Experience &amp; Education
+              Education
             </h3>
             <div className="relative flex flex-col gap-0">
               {/* Vertical line */}
@@ -143,7 +115,7 @@ export default function About() {
                 style={{ background: "rgba(255,255,255,0.1)" }}
               />
 
-              {TIMELINE.map((item, i) => (
+              {EDUCATION.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ y: 20, opacity: 0 }}
@@ -155,14 +127,16 @@ export default function About() {
                   {/* Dot */}
                   <div className="relative z-10 flex-shrink-0">
                     <div
-                      className="flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold"
+                      className="flex h-10 w-10 items-center justify-center rounded-full"
                       style={{
                         background: "rgba(255,255,255,0.04)",
                         border: "2px solid rgba(255,255,255,0.25)",
-                        color: "var(--foreground)",
                       }}
                     >
-                      {item.year.slice(2)}
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16" style={{ color: "var(--foreground)" }}>
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+                      </svg>
                     </div>
                   </div>
                   {/* Content */}
@@ -174,10 +148,10 @@ export default function About() {
                       {item.year}
                     </p>
                     <p className="font-semibold text-sm" style={{ color: "var(--foreground)" }}>
-                      {item.role}
+                      {item.degree}
                     </p>
                     <p className="text-xs mb-2 font-medium" style={{ color: "var(--muted)" }}>
-                      {item.company}
+                      {item.institution}
                     </p>
                     <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
                       {item.description}

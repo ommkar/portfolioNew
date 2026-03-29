@@ -8,8 +8,8 @@ const PROJECTS = [
     description:
       "Engineered a FastAPI backend with fully validated endpoints to generate AI-driven fitness programs using Gemini 2.5 Flash, which provides responses within 1 minute.",
     tags: ["Gemini API", " Python", "ReactJS", "FastAPI"],
-    link: "#",
-    github: "#",
+    link: "https://fitness-app-umber-mu.vercel.app/",
+    github: "https://github.com/ommkar/fitness_app",
     featured: true,
   },
   {
@@ -17,9 +17,8 @@ const PROJECTS = [
     description:
       "Built an interactive single-page web application enabling users to search over 1000s of Pokemon by name, dynamically fetching real time data from the PokeAPI.",
     tags: ["HTML5", "CSS3", "JavaScript", "PokeAPI", "RESTfulAPI"],
-    emoji: "✍️",
-    link: "#",
-    github: "#",
+    link: "https://ommkar.github.io/Pokedex/",
+    github: "https://github.com/ommkar/Pokedex",
     featured: true,
   },
   {
@@ -28,7 +27,7 @@ const PROJECTS = [
       "Built a 25-class malware family classifier using transfer learning on the MalImg dataset (~9,000+ binary visualization images), achieving 95% overall accuracy on the held-out validation set.",
     tags: ["TensorFlow", "Keras", "Python", "MalImg Dataset", "CNN"],
     link: "#",
-    github: "#",
+    github: "https://github.com/ommkar/malimg",
     featured: true,
   },
 ];
@@ -106,7 +105,7 @@ export default function Projects() {
           className="mt-14 text-center"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/ommkar"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -132,16 +131,7 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
   return (
     <motion.article variants={cardVariants} className="card group flex flex-col gap-4 p-6">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div
-          className="flex h-12 w-12 items-center justify-center rounded-xl text-2xl"
-          style={{
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          {project.emoji}
-        </div>
+      <div className="flex items-start justify-end gap-4">
         <div className="flex gap-2">
           <a
             href={project.github}

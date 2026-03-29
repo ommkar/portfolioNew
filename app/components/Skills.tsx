@@ -5,37 +5,34 @@ import { motion } from "framer-motion";
 const SKILL_GROUPS = [
   {
     category: "Languages",
-    icon: "🎨",
     skills: [
-      { name: "C", icon: "⚛️", level: 95 },
-      { name: "C++", icon: "▲", level: 92 },
-      { name: "Python", icon: "TS", level: 90 },
-      { name: "Java", icon: "💨", level: 93 },
+      { name: "C", image: "/skills/c.png", level: 95 },
+      { name: "C++", image: "/skills/cpp.png", level: 92 },
+      { name: "Python", image: "/skills/python.png", level: 90 },
+      { name: "Java", image: "/skills/java.png", level: 93 },
     ],
   },
   {
     category: "Web Development",
-    icon: "⚙️",
     skills: [
-      { name: "React", icon: "⚛️", level: 95 },
-      { name: "Node.js", icon: "🟢", level: 90 },
-      { name: "Express", icon: "🚂", level: 88 },
-      { name: "HTML5", icon: "🐘", level: 82 },
-      { name: "CSS3", icon: "◈", level: 85 },
-      { name: "JavaScript", icon: "🔴", level: 75 },
-      { name: "RESTful API", icon: "◉", level: 78 },
+      { name: "React", image: "/skills/react.png", level: 95 },
+      { name: "Node.js", image: "/skills/nodejs.png", level: 90 },
+      { name: "Express", image: "/skills/express.png", level: 88 },
+      { name: "HTML5", image: "/skills/html5.png", level: 82 },
+      { name: "CSS3", image: "/skills/css3.png", level: 85 },
+      { name: "JavaScript", image: "/skills/javascript.png", level: 75 },
+      { name: "RESTful API", image: "/skills/api.png", level: 78 },
     ],
   },
   {
     category: "Machine Learning & Data Science",
-    icon: "🔧",
     skills: [
-      { name: "TensorFlow", icon: "🐳", level: 82 },
-      { name: "Keras", icon: "☁️", level: 75 },
-      { name: "Python", icon: "🔄", level: 80 },
-      { name: "Scikit-learn", icon: "🌿", level: 95 },
-      { name: "Pandas", icon: "🐧", level: 78 },
-      { name: "NumPy", icon: "▲", level: 90 },
+      { name: "TensorFlow", image: "/skills/tensorflow.png", level: 82 },
+      { name: "Keras", image: "/skills/keras.png", level: 75 },
+      { name: "Python", image: "/skills/python.png", level: 80 },
+      { name: "Scikit-learn", image: "/skills/scikitlearn.png", level: 95 },
+      { name: "Pandas", image: "/skills/pandas.png", level: 78 },
+      { name: "NumPy", image: "/skills/numpy.png", level: 90 },
     ],
   },
 ];
@@ -94,16 +91,7 @@ export default function Skills() {
         >
           {SKILL_GROUPS.map((group) => (
             <motion.div key={group.category} variants={itemVariants} className="card p-6">
-              <div className="mb-6 flex items-center gap-3">
-                <span
-                  className="flex h-10 w-10 items-center justify-center rounded-xl text-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.10)",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                  }}
-                >
-                  {group.icon}
-                </span>
+              <div className="mb-6">
                 <h3 className="font-semibold text-lg" style={{ color: "var(--foreground)" }}>{group.category}</h3>
               </div>
 
@@ -151,12 +139,12 @@ export default function Skills() {
   );
 }
 
-function SkillBar({ skill }: { skill: { name: string; icon: string; level: number } }) {
+function SkillBar({ skill }: { skill: { name: string; image: string; level: number } }) {
   return (
     <div className="group">
       <div className="mb-1.5 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-base w-5 text-center">{skill.icon}</span>
+          <img src={skill.image} alt={skill.name} className="w-5 h-5 object-contain" />
           <span className="text-sm font-medium" style={{ color: "var(--foreground)" }}>
             {skill.name}
           </span>
