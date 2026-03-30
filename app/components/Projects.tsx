@@ -7,7 +7,7 @@ const PROJECTS = [
     title: "AI-Powered Fitness Agent",
     description:
       "Engineered a FastAPI backend with fully validated endpoints to generate AI-driven fitness programs using Gemini 2.5 Flash, which provides responses within 1 minute.",
-    tags: ["Gemini API", " Python", "ReactJS", "FastAPI"],
+    tags: ["Gemini API", "Python", "ReactJS", "FastAPI"],
     link: "https://fitness-app-umber-mu.vercel.app/",
     github: "https://github.com/ommkar/fitness_app",
     featured: true,

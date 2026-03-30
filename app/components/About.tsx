@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 
 const EDUCATION = [
   {
-    year: "2022 – 2026",
+    year: "2023 – 2027 (Expected)",
     degree: "B.Tech in Computer Science & Engineering",
-    institution: "Your University Name",
+    institution: "Odisha University of Technology and Research",
     description:
       "Focused on AI/ML, data structures, algorithms, and full-stack development. Participated in hackathons and open-source projects.",
   },
   {
-    year: "2020 – 2022",
-    degree: "Higher Secondary (12th Grade)",
-    institution: "Your School Name",
+    year: "2021 – 2023",
+    degree: "12th",
+    institution: "Doon Internation School",
     description:
       "Studied Science stream with Computer Science. Achieved strong academic results.",
   },
   {
-    year: "2020",
-    degree: "Secondary (10th Grade)",
-    institution: "Your School Name",
+    year: "2021",
+    degree: "10th",
+    institution: "St. Xavier International School",
     description:
       "Completed secondary education with distinction.",
   },
