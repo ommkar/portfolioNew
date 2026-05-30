@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Portfolio — Full-Stack Developer",
+  title: " Ommkar Pattnaik",
   description:
-    "Personal portfolio showcasing projects, skills, and experience as a modern full-stack developer.",
+    "Personal portfolio showcasing projects, skills, and experience as a modern full-stack and AI/ML developer.",
 };
 
 export default function RootLayout({

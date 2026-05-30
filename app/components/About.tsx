@@ -65,7 +65,7 @@ export default function About() {
                 }}
               />
               <img
-                src="/photo.jpg"
+                src="images/photo.jpg"
                 alt="Ommkar Pattnaik"
                 className="relative h-full w-full object-cover rounded-2xl"
               />
