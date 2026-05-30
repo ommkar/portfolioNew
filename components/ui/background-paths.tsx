@@ -86,7 +86,7 @@ export function BackgroundPaths({
                                             delay:
                                                 wordIndex * 0.1 +
                                                 letterIndex * 0.03,
-                                            type: "spring",
+                                            type: "spring" as const,
                                             stiffness: 150,
                                             damping: 25,
                                         }}

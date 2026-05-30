@@ -43,7 +43,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { y: 30, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 20 } },
+  show: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 100, damping: 20 } },
 };
 
 export default function Skills() {

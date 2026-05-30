@@ -65,7 +65,7 @@ export default function Navbar() {
                     layoutId="navIndicator"
                     className="absolute bottom-0 left-0 h-[1.5px] w-full rounded-full"
                     style={{ background: "var(--foreground)" }}
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    transition={{ type: "spring" as const, stiffness: 400, damping: 30 }}
                   />
                 )}
               </a>

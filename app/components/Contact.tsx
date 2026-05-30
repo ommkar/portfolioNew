@@ -95,7 +95,7 @@ export default function Contact() {
             initial={{ x: -30, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, type: "spring" }}
+            transition={{ duration: 0.7, type: "spring" as const }}
             className="flex flex-col gap-6 lg:col-span-2"
           >
             <div
@@ -152,7 +152,7 @@ export default function Contact() {
             initial={{ x: 30, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, type: "spring" }}
+            transition={{ duration: 0.7, type: "spring" as const }}
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 lg:col-span-3"
           >

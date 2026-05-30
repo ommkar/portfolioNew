@@ -49,7 +49,7 @@ export default function About() {
             initial={{ x: -40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, type: "spring" }}
+            transition={{ duration: 0.8, type: "spring" as const }}
             className="flex flex-col gap-6"
           >
             {/* Photo */}
@@ -101,7 +101,7 @@ export default function About() {
             initial={{ x: 40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, type: "spring" }}
+            transition={{ duration: 0.8, type: "spring" as const }}
             className="flex flex-col gap-2"
           >
             <h3 className="mb-6 text-xl font-semibold" style={{ color: "var(--foreground)" }}>
@@ -120,7 +120,7 @@ export default function About() {
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.15, type: "spring", stiffness: 100 }}
+                  transition={{ delay: i * 0.15, type: "spring" as const, stiffness: 100 }}
                   className="relative flex gap-5 pb-8 last:pb-0"
                 >
                   {/* Dot */}
