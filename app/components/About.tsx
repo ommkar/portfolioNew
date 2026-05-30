@@ -8,21 +8,21 @@ const EDUCATION = [
     degree: "B.Tech in Computer Science & Engineering",
     institution: "Odisha University of Technology and Research",
     description:
-      "Focused on AI/ML, data structures, algorithms, and full-stack development. Participated in hackathons and open-source projects.",
+      "Focused on AI/ML, data structures and algorithms and full-stack development. CGPA 8.93",
   },
   {
     year: "2021 – 2023",
     degree: "12th",
-    institution: "Doon Internation School",
+    institution: "Doon International School",
     description:
-      "Studied Science stream with Computer Science. Achieved strong academic results.",
+      "Studied Science stream. Achieved 91.6%",
   },
   {
     year: "2021",
     degree: "10th",
     institution: "St. Xavier International School",
     description:
-      "Completed secondary education with distinction.",
+      "Completed secondary education with 89.4%",
   },
 ];
 
@@ -38,7 +38,6 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <span className="section-label">The Story</span>
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl" style={{ color: "var(--foreground)" }}>
             About Me
           </h2>
@@ -83,7 +82,7 @@ export default function About() {
             </p>
 
             {/* Download CV */}
-            <a href="#">
+            <a href="/update_resume.pdf" download="Ommkar_Pattnaik_Resume.pdf">
               <span className="btn-glass group w-fit">
                 <span className="btn-glass-inner group-hover:-translate-y-0.5 transition-transform">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
@@ -91,7 +90,7 @@ export default function About() {
                     <polyline points="7 10 12 15 17 10" />
                     <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
-                  Download CV
+                  Download Resume
                 </span>
               </span>
             </a>

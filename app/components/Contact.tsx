@@ -44,7 +44,15 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1500));
+    
+    const mailtoUrl = `mailto:ommkar2005@gmail.com?subject=${encodeURIComponent(
+      form.subject || "Portfolio Contact"
+    )}&body=${encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    )}`;
+    
+    window.location.href = mailtoUrl;
+    
     setStatus("sent");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
@@ -157,7 +165,6 @@ export default function Contact() {
                   id="contact-name"
                   type="text"
                   required
-                  placeholder="John Doe"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className="form-input"
@@ -171,7 +178,7 @@ export default function Contact() {
                   id="contact-email"
                   type="email"
                   required
-                  placeholder="john@example.com"
+
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   className="form-input"
@@ -226,7 +233,7 @@ export default function Contact() {
                     </>
                   )}
                   {status === "sending" && "Sending..."}
-                  {status === "sent" && "✓ Message sent! I'll be in touch soon."}
+                  {status === "sent" && "Message sent! I'll be in touch soon."}
                   {status === "error" && "Something went wrong. Please try again."}
                 </span>
               </span>

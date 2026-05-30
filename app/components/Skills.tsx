@@ -6,33 +6,32 @@ const SKILL_GROUPS = [
   {
     category: "Languages",
     skills: [
-      { name: "C", image: "/skills/c.png", level: 95 },
-      { name: "C++", image: "/skills/cpp.png", level: 92 },
-      { name: "Python", image: "/skills/python.png", level: 90 },
-      { name: "Java", image: "/skills/java.png", level: 93 },
+      { name: "C", image: "/images/c.png", level: 95 },
+      { name: "C++", image: "/images/cpp.png", level: 92 },
+      { name: "Python", image: "/images/python.png", level: 90 },
     ],
   },
   {
     category: "Web Development",
     skills: [
-      { name: "React", image: "/skills/react.png", level: 95 },
-      { name: "Node.js", image: "/skills/nodejs.png", level: 90 },
-      { name: "Express", image: "/skills/express.png", level: 88 },
-      { name: "HTML5", image: "/skills/html5.png", level: 82 },
-      { name: "CSS3", image: "/skills/css3.png", level: 85 },
-      { name: "JavaScript", image: "/skills/javascript.png", level: 75 },
-      { name: "RESTful API", image: "/skills/api.png", level: 78 },
+      { name: "React", image: "/images/react.png", },
+      { name: "Node.js", image: "/images/node.png", level: 90 },
+      { name: "Express", image: "/images/js.png", level: 88 },
+      { name: "HTML5", image: "/images/html5.png", level: 82 },
+      { name: "CSS3", image: "/images/css3.png", level: 85 },
+      { name: "JavaScript", image: "/images/javascript.png", level: 75 },
+      { name: "RESTful API", image: "/images/api.png", level: 78 },
     ],
   },
   {
     category: "Machine Learning & Data Science",
     skills: [
-      { name: "TensorFlow", image: "/skills/tensorflow.png", level: 82 },
-      { name: "Keras", image: "/skills/keras.png", level: 75 },
-      { name: "Python", image: "/skills/python.png", level: 80 },
-      { name: "Scikit-learn", image: "/skills/scikitlearn.png", level: 95 },
-      { name: "Pandas", image: "/skills/pandas.png", level: 78 },
-      { name: "NumPy", image: "/skills/numpy.png", level: 90 },
+      { name: "TensorFlow", image: "/images/tensorflow.png", level: 82 },
+      { name: "Keras", image: "/images/keras.png", level: 75 },
+      { name: "Python", image: "/images/python.png", level: 80 },
+      { name: "Scikit-learn", image: "/images/scikitlearn.png", level: 95 },
+      { name: "Pandas", image: "/images/pandas.png", level: 78 },
+      { name: "NumPy", image: "/images/numpy.png", level: 90 },
     ],
   },
 ];
@@ -95,36 +94,19 @@ export default function Skills() {
                 <h3 className="font-semibold text-lg" style={{ color: "var(--foreground)" }}>{group.category}</h3>
               </div>
 
-              <div className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4">
                 {group.skills.map((skill) => (
-                  <SkillBar key={skill.name} skill={skill} />
+                  <li key={skill.name} className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ background: "var(--foreground)", opacity: 0.6 }} />
+                    <img src={skill.image} alt={skill.name} className="w-5 h-5 object-contain" />
+                    <span className="text-sm font-medium" style={{ color: "var(--foreground)" }}>
+                      {skill.name}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Other tools row */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-12"
-        >
-          <p className="mb-5 text-center text-sm font-medium" style={{ color: "var(--muted)" }}>
-            Also worked with
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Python", "Rust", "Go", "MongoDB", "Supabase", "Figma",
-              "Playwright", "Jest", "Zustand", "tRPC", "Kafka", "NGINX",
-            ].map((tech) => (
-              <span key={tech} className="skill-badge text-sm">
-                {tech}
-              </span>
-            ))}
-          </div>
         </motion.div>
       </div>
 
@@ -136,38 +118,5 @@ export default function Skills() {
         }}
       />
     </section>
-  );
-}
-
-function SkillBar({ skill }: { skill: { name: string; image: string; level: number } }) {
-  return (
-    <div className="group">
-      <div className="mb-1.5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <img src={skill.image} alt={skill.name} className="w-5 h-5 object-contain" />
-          <span className="text-sm font-medium" style={{ color: "var(--foreground)" }}>
-            {skill.name}
-          </span>
-        </div>
-        <span className="text-xs font-mono" style={{ color: "var(--muted)" }}>
-          {skill.level}%
-        </span>
-      </div>
-      <div
-        className="h-1.5 w-full overflow-hidden rounded-full"
-        style={{ background: "rgba(255,255,255,0.10)" }}
-      >
-        <motion.div
-          className="h-full rounded-full"
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          style={{
-            background: "linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.25))",
-          }}
-        />
-      </div>
-    </div>
   );
 }

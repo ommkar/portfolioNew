@@ -50,9 +50,8 @@ function FloatingPaths({ position }: { position: number }) {
 /* ─── Typewriter Roles ─────────────────────────────────────────────── */
 const ROLES = [
   "Full-Stack Developer",
-  "React & Next.js Expert",
-  "TypeScript Enthusiast",
-  "Open-Source Contributor",
+  "Agentic AI",
+  "Machine Learning Enthusiast",
 ];
 
 /* ─── Hero Section ─────────────────────────────────────────────────── */
